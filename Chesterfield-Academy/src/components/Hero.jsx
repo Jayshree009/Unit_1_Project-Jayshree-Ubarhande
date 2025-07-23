@@ -26,7 +26,7 @@ function Hero() {
 
   return (
     <section className="hero text-center py-5 bg-light">
-      <h1 className="hero-heading mb-3">Chesterfield Academy</h1>
+      <h1 className="hero-heading ">Chesterfield Academy</h1>
       <h4 className="hero-address mb-4">15234 Chesterfield Business Pkwy, Chesterfield, MO 63100</h4>
       
       <div className="d-flex justify-content-center align-items-center mb-4">

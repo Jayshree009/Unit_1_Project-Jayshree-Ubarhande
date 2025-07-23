@@ -1,13 +1,14 @@
 import React from "react";
 import aboutImage from '../assets/infant_room.jpg';
+import { useState } from 'react';
 
 function AboutUs() {
-  return (
-    <section style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
-      <h2 style={{ color: "#007BFF", marginBottom: "1.5rem" }}>
-        About Chesterfield Academy
-      </h2>
+  const [showMore, setShowMore] = useState(false);
 
+  return (
+    <div className="container my-5">
+      <h2>About Chesterfield Academy</h2>
+      
       <img
         src={aboutImage}
         alt="Chesterfield Academy Campus"
@@ -19,18 +20,23 @@ function AboutUs() {
           marginBottom: "1.5rem"
         }}
       />
+      <p>
+               Chesterfield Academy is dedicated to providing a nurturing and stimulating environment...
+      </p>
 
-      <p style={{ fontSize: "1.1rem", marginBottom: "1rem" }}>
-        Chesterfield Academy is a nurturing environment where young children build a strong foundation for lifelong learning.
-      </p>
-      <p style={{ fontSize: "1.1rem", marginBottom: "1rem" }}>
-        We offer programs for infants through age 7, providing hands-on learning, creative play, and supportive guidance from experienced educators.
-      </p>
-      <p style={{ fontSize: "1.1rem" }}>
-        With a focus on STEAM (Science, Technology, Engineering, Art, and Math), we combine academic readiness with social-emotional development to help every child thrive.
-      </p>
-    </section>
+      {showMore && (
+        <p>
+          We offer programs for infants through age 7, providing hands-on learning, creative play, and supportive guidance from experienced educators.
+          We focus on holistic development through structured play, early literacy, and personalized attention. Our certified staff are passionate about early childhood education.
+        </p>
+      )}
+
+      <button onClick={() => setShowMore(!showMore)} className="btn btn-primary">
+        {showMore ? "Show Less" : "Know More"}
+      </button>
+    </div>
   );
 }
 
 export default AboutUs;
+

@@ -10,6 +10,7 @@ import Reviews from "./components/Reviews";
 import HealthSafety from "./components/HealthSafety";
 import BookTour from "./components/BookTour";
 import Footer from "./components/Footer";
+import Announcements from "./components/Announcements";
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<><Hero /><WelcomeMessage /><MeetTheHead /><Programs /></>} />
+        <Route path="/" element={<><Hero /><WelcomeMessage /><MeetTheHead /><Programs /><Announcements /></>} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/teachers" element={<OurTeachers />} />
         <Route path="/reviews" element={<Reviews />} />
