@@ -5,6 +5,8 @@ import App from './App.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
+//Starting the React App and mount it in "root" in index.html
+// Wrapping everything in BrouserRouter  - for navigation
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>

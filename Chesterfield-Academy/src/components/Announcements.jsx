@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+
 function Announcements() {
   const [input, setInput] = useState('');
   const [announcements, setAnnouncements] = useState([]);
@@ -29,6 +30,7 @@ function Announcements() {
           onChange={(e) => setInput(e.target.value)}
         />
         <button className="btn btn-success" onClick={handleAdd}>Post</button>
+       
       </div>
 
       <ul className="list-group">

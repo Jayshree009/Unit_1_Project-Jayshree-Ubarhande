@@ -23,6 +23,7 @@ function Reviews() {
     <section className="reviews" style={{ padding: "2rem" }}>
       <h2 style={{ textAlign: "center", marginBottom: "2rem" }}>What Parents Are Saying</h2>
       <div style={{ display: "flex", justifyContent: "space-around", flexWrap: "wrap", gap: "1rem" }}>
+        {/*Using array map to display content */}
         {reviews.map((review, index) => (
           <div
             key={index}

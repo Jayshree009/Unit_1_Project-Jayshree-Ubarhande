@@ -28,7 +28,7 @@ function Programs() {
         <h2 className="mb-4">Our Programs</h2>
         <div className="row">
           {programs.map((program, index) => (
-            <ProgramCard
+            <ProgramCard          //Using Props to send data to a reusable Programcard component.
               key={index}
               image={program.image}
               title={program.title}

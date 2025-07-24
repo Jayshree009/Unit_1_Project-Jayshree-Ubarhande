@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from './Button';
 
 function BookTour() {
   const [formData, setFormData] = useState({
@@ -46,7 +47,7 @@ function BookTour() {
           Thank you! Your request has been submitted.
         </div>
       )}
-
+      {/*Form with various input types and onSubmit Event handler */}
       <form onSubmit={handleSubmit} noValidate>
         <div className="mb-3">
           <label className="form-label">Parent's Name</label>
@@ -107,7 +108,7 @@ function BookTour() {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <Button label="Submit" onClick={handleSubmit} className="btn-primary" />
       </form>
     </div>
   );

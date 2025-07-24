@@ -12,7 +12,8 @@ import BookTour from "./components/BookTour";
 import Footer from "./components/Footer";
 import Announcements from "./components/Announcements";
 
-
+//Defining layout with Header and Footer - Always visible
+// Use of <Routes> and <Route> for page navigation
 function App() {
   return (
     <>

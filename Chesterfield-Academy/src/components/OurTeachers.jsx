@@ -1,4 +1,4 @@
-import teacher1 from '../assets/Smith.jpg';
+import teacher1 from '../assets/Smith.jpg'; //Importing teachers pictures 
 import teacher2 from '../assets/Johnson.jpg';
 import teacher3 from '../assets/Lopez.jpg';
 
@@ -38,6 +38,7 @@ function OurTeachers() {
           marginTop: "30px",
         }}
       >
+        {/*Using array map to display content */}
         {teachers.map((teacher, index) => (
           <div
             key={index}
@@ -49,6 +50,7 @@ function OurTeachers() {
               textAlign: "center",
             }}
           >
+            {/* Displaying teachers profiles with images */}
             <img
               src={teacher.image}
               alt={teacher.name}

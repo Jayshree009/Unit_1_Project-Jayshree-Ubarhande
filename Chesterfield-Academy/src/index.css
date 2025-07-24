@@ -1,18 +1,8 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
- }
-
+/*HTML anchor <a> elements, which are used to create hyperlinks in  webpages.*/
 a {
   font-weight: 500;
   color: #646cff;
-  text-decoration: inherit;
+  text-decoration:inherit;
 }
 a:hover {
   color: #535bf2;
@@ -20,10 +10,10 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  display: flex; /* Turns the <body> into a flex container - specially the homepage photgallery- when switched to mobile device*/
+  place-items: center;/*Ensures that entire app stays centered vertically and horizontally, speciall on mobile devices */
+  min-width: 320px; /*Ensures that the body is at least 320px wide, which prevents layout breaking on very small screens.*/
+  min-height: 100vh; /*Ensures -the body always takes up at least the full height of the viewport, even if the content is smaller — helpful for vertical centering or full-screen backgrounds.*/
 }
 
 h1 {
@@ -31,17 +21,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
+
 
 .hero {
   text-align: center;
@@ -59,6 +39,7 @@ button {
   margin-bottom: 10px;
 }
 
+/*setting the wesite width and alignment*/
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -66,6 +47,7 @@ button {
   text-align: center;
 }
 
+/*Logo size*/
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -73,14 +55,12 @@ button {
   transition: filter 300ms;
 }
 
+/*Our Programs card*/
 .card {
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
-}
-
+/* Navigation styling - horizontally aligned, neatly spaced, centerd, no bullets, or underlines */
 nav ul {
   list-style: none;
   display: flex;
@@ -93,7 +73,7 @@ nav ul {
 nav a {
   text-decoration: none;
   color: #333;
-  font-weight: 600;
+  font-weight: bolder;
 }
 
 .hero {
@@ -154,4 +134,57 @@ footer {
 .welcome p {
   font-size: 1.1rem;
   margin-bottom: 1rem;
+}
+/* To support the media query to respond user's preferred color scheme setting in the device */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Zoom animation on hover */
+@keyframes logo-zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  
+}
+
+.logo:hover {
+  animation: logo-zoom 1s ease-in-out;
+}
+
+
+/*This is the highest-level selector in CSS. Styles defined here apply globally unless overridden.*/
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Supports both light and dark modes */
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  /* Improves typography and rendering across browsers */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+input[type="date"] {
+  -webkit-appearance: menulist;
+  appearance: auto;
 }
